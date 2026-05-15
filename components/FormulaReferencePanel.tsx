@@ -1,0 +1,6 @@
+import type { CalculationResult } from "@/types/bbs";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
+export function FormulaReferencePanel({ result }: { result: CalculationResult }) {
+  return <Card className="print-card"><CardHeader><CardTitle>Formula Reference & Assumptions</CardTitle></CardHeader><CardContent className="space-y-4"><div><h3 className="font-semibold">Assumptions shown to auditor</h3><ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-700">{result.assumptions.map((a) => <li key={a}>{a}</li>)}</ul></div>{result.warnings.length > 0 && <div className="rounded-lg border border-amber-200 bg-amber-50 p-3"><h3 className="font-semibold text-amber-900">Engineering warnings</h3><ul className="mt-1 list-disc pl-5 text-sm text-amber-800">{result.warnings.map((w) => <li key={w}>{w}</li>)}</ul></div>}<div className="grid gap-3 md:grid-cols-2">{result.formulaReferences.map((f) => <div key={f.id} className="rounded-lg border border-slate-200 p-3"><div className="text-sm font-bold text-slate-900">{f.label}</div><code className="mt-1 block rounded bg-slate-100 p-2 text-xs">{f.expression}</code><div className="mt-1 text-xs text-slate-600">Rule basis: {f.source}</div></div>)}</div></CardContent></Card>;
+}
