@@ -8,6 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "validate:package": "node -e \"JSON.parse(require('fs').readFileSync('package.json', 'utf8'))\""
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -31,3 +33,6 @@
     "@types/react-dom": "latest",
     "tailwindcss": "latest",
     "typescript": "^5.0.0",
+    "vitest": "^3.2.4"
+  }
+}
