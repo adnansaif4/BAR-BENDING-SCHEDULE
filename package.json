@@ -10,29 +10,31 @@
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "validate:package": "node -e \"JSON.parse(require('fs').readFileSync('package.json', 'utf8'))\""
-    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@radix-ui/react-slot": "latest",
-    "class-variance-authority": "latest",
-    "clsx": "latest",
-    "jspdf": "latest",
-    "jspdf-autotable": "latest",
-    "lucide-react": "latest",
-    "next": "^15.3.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-hook-form": "^7.54.0",
-    "tailwind-merge": "latest",
-    "zod": "^3.24.0"
+    "@radix-ui/react-slot": "1.2.3",
+    "clsx": "2.1.1",
+    "jspdf": "3.0.1",
+    "jspdf-autotable": "5.0.2",
+    "lucide-react": "0.577.0",
+    "next": "15.5.18",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "react-hook-form": "7.54.1",
+    "tailwind-merge": "3.3.1",
+    "zod": "3.24.4"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "latest",
-    "@types/node": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "tailwindcss": "latest",
-    "typescript": "^5.0.0",
-    "vitest": "^3.2.4"
+    "@tailwindcss/postcss": "4.1.18",
+    "@types/node": "22.15.3",
+    "@types/react": "19.2.13",
+    "@types/react-dom": "19.2.1",
+    "tailwindcss": "4.1.18",
+    "typescript": "5.8.3",
+    "vitest": "3.2.4"
+  },
+  "packageManager": "npm@11.4.2",
+  "engines": {
+    "node": ">=20.18.0"
   }
 }
